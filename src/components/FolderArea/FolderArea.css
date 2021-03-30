@@ -1,0 +1,94 @@
+.folder-area {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    background-color: #1D1B26;
+    border-bottom-right-radius: 2rem;
+
+    /* display: grid;
+
+    grid-template-columns: repeat(5, 1fr); */
+    display: flex;
+
+    flex-wrap: wrap;
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+.folder {
+    width: 13rem;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    transition: all .4s;
+}
+
+.folder:hover {
+    background-color: #5C5B60;
+}
+
+.folder__icon {
+    font-size: 7rem;
+    color: #5FCFFF;
+}
+
+.folder-name {
+    font-size: 1.5rem;
+    color: #dddddd;
+    transition: all .4s;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.create {
+    width: 15rem;
+    height: 20rem;
+    background-color: lawngreen;
+}
+
+.close-popup {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: .5rem;
+    cursor: pointer;
+    color: #5FCFFF;
+
+    align-self: center;
+}
+
+.popup__input {
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    outline: none;
+}
+
+.popup__btn {
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    outline: none;
+    background-color: #5FCFFF;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.popup__btn:hover {
+    background-color: #1880ad;
+}
+
+.error {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 500;
+}

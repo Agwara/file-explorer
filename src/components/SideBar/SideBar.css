@@ -1,0 +1,39 @@
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    background-color: #434247;
+    border-radius: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 2rem;
+
+    overflow-y: scroll;
+}
+
+.sidebar__color-list {
+    margin-top: 2.5rem;
+    display: flex;
+    grid-column-gap: 2rem;
+
+    list-style: none;
+}
+
+.sidebar__color-item {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.color--1 {
+    background-color: #FF5F57;
+}
+
+.color--2 {
+    background-color: #FEBC2E;
+}
+
+.color--3 {
+    background-color: #28C840;
+}

@@ -1,0 +1,114 @@
+.header {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    background-color: #1D1B26;
+    border-top-right-radius: 2rem;
+
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+}
+
+.folder-level {
+    font-size: 2rem;
+    height: inherit;
+    width: 50%;
+
+    display: flex;
+    grid-column-gap: 2rem;
+
+    align-items: center;
+    padding-left: 3rem;
+
+    cursor: pointer;
+}
+
+.arrow-control {
+    font-size: 4rem;
+    font-weight: lighter;
+}
+
+.color-faint {
+    color: #777777;
+}
+
+.color-pronounce {
+    color: #bebdbd;
+}
+
+.current-folder {
+    margin-top: -.5rem;
+    color: #dddddd;
+    text-transform: capitalize;
+}
+
+.other-controls {
+    height: inherit;
+    width: 50%;
+
+    display: flex;
+    grid-column-gap: 4rem;
+    justify-content: space-around;
+}
+
+.th-large__section {
+    display: flex;
+    grid-column-gap: 1rem;
+
+    align-items: center;
+}
+
+.th-large__icon {
+    font-size: 3rem;
+    color: #BEBDBD;
+
+    cursor: pointer;
+
+    transition: all .4s;
+}
+
+.th-large__icon:hover {
+    color: #588FCC;
+}
+
+.th-large__control {
+    display: flex;
+    flex-direction: column;
+}
+
+.th-large__angle {
+    color: #BEBDBD;
+    font-size: 1.7rem;
+    cursor: pointer;
+
+    transition: all .4s;
+}
+
+.th-large__angle:hover {
+    color: #588FCC;
+}
+
+.th__section {
+    display: flex;
+    align-items: center;
+    grid-column-gap: 1rem;
+}
+
+.other-controls__upload {
+    align-self: center;
+    font-size: 3rem;
+    color: #919191;
+
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.other-controls__upload:hover {
+    color: #588FCC;
+}
+
+
+
+
