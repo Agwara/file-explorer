@@ -1,0 +1,11 @@
+.create-folder {
+    position: absolute;
+    height: 20rem;
+    width: 20rem;
+    background-color: white;
+    border-right: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100 !important;
+}

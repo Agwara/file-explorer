@@ -9,7 +9,7 @@
 
     padding-left: 2rem;
 
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .sidebar__color-list {

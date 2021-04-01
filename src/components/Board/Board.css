@@ -1,0 +1,20 @@
+.board {
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(5, 18rem);
+    grid-template-rows: 14rem;
+}
+
+.square-dimensions {
+    width: 18rem;
+    height: 15rem;
+}
+
+.zone {
+    background-color: brown;
+    height: 100%;
+    width: 100%;
+}

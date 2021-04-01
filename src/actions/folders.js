@@ -1,9 +1,11 @@
 // CREATE_FOLDER
-export const create_folder = (folder_name, folder_directory) => ({
+export const create_folder = (folder_name, folder_directory, posX, posY) => ({
     type: "CREATE_FOLDER",
     folder: {
         folder_name,
-        folder_directory
+        folder_directory,
+        posX,
+        posY
     }
 })
 
@@ -17,11 +19,13 @@ export const delete_folder = (folder_name, folder_directory) => ({
 })
 
 // RENAME FOLDER 
-export const rename_folder = (folder_name, prevName, folder_directory) => ({
+export const rename_folder = (folder_name, prevName, folder_directory, posX, posY) => ({
     type: "RENAME_FOLDER",
     updates: {
         folder_name,
         prevName,
-        folder_directory
+        folder_directory,
+        posX,
+        posY
     }
 })

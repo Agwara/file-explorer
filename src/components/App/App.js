@@ -12,6 +12,7 @@ const App = () => {
     window.addEventListener('contextmenu', function (e) { 
         e.preventDefault(); 
     }, false);
+    
     return (
         <div className="app">
             <SideBar />

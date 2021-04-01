@@ -4,7 +4,8 @@ import { createLogger } from "redux-logger";
 
 
 import { currentDirectory } from "../reducers/directory";
-import { folderReducer } from "../reducers/folders"
+import { folderReducer } from "../reducers/folders";
+import { dragName } from "../reducers/dragName"
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -16,7 +17,8 @@ const configureStore = () => {
 	const store = createStore(
 		combineReducers({
 			currentDirectory,
-			folderReducer
+			folderReducer,
+			dragName
 		}),
 		composeEnhancers(applyMiddleware(...middlewares))
 	);

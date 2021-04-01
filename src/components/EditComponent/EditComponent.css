@@ -1,0 +1,82 @@
+.edit-folder {
+    position: absolute;
+    height: 20rem;
+    width: 20rem;
+    background-color: white;
+    border-right: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100 !important;
+}
+
+
+.popup__input {
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+    outline: none;
+}
+
+.popup__btn {
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    outline: none;
+    background-color: #5FCFFF;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.popup__btn:hover {
+    background-color: #1880ad;
+}
+
+.error {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.popup__rename {
+    width: 80%;
+    margin: 1rem auto;
+    padding: .5rem;
+    outline: none;
+    background-color: rgb(45, 103, 230);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.popup__rename:hover {
+    background-color: blue;
+}
+
+.popup__delete {
+    width: 80%;
+    margin: 1rem auto;
+    padding: .5rem;
+    outline: none;
+    background-color: rgb(233, 130, 130);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.popup__delete:hover {
+    background-color: red;
+}

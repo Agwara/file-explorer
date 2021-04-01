@@ -5,7 +5,9 @@ import "./SideBar.css";
 import Favourites from "../Favourites/Favourites";
 import Cloud from "../Cloud/Cloud";
 
+
 const SideBar = () => {
+
     return (
         <div className="sidebar">
             <ul className="sidebar__color-list">
