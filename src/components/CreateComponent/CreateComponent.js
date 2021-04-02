@@ -5,6 +5,11 @@ import "./CreateComponent.css"
 
 import {create_folder} from "../../actions/folders"
 
+/*
+    This component is concerned witht logic of creating 
+    a component
+*/
+
 const CreateComponent = (props) => {
     const [errorMessage, setErrorMessage] = useState(false);
     const [folderName, setFolderName] = useState("")
@@ -13,11 +18,16 @@ const CreateComponent = (props) => {
         props.closeCreatePopUp()
     }
 
+    // Changes the newFolderName state variable when a user types 
     const onNameChange = (e) => {
         setFolderName(e.target.value)
         setErrorMessage(false)
     }
-
+    
+    /*
+        This function dispatches a redux action to update the app state
+        after creating a folder
+    */
     const onCreateFolder = () => {
         if ((folderName.length > 0) && !errorMessage) {
             closePopUp()
@@ -29,6 +39,7 @@ const CreateComponent = (props) => {
         setErrorMessage(false)
     }
 
+    // Checks if that particular name exist when the input field is out of focus
     const checkFolderName = () => {
         props.folders.map((folder) => {
             if (folder.folder_name === folderName) {

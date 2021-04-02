@@ -22,6 +22,10 @@ const Board = (props) => {
     */    
     useEffect(() => {
         let tempFolder = []
+        /*
+            Iterate through the folders gotten from the redux store and select
+            those that have a directory match.
+        */
         props.folders.map((folder, key) => {
             if (folder.folder_directory === props.currentDirectory) {
                 tempFolder.push(folder)
@@ -32,7 +36,7 @@ const Board = (props) => {
         setCurrentFolders(tempFolder)
 
         /* 
-            Generate the coordinates for each square on thw board.
+            Generate the coordinates for each square on the board.
         */    
         const coordinates = []
         for (let m = 0; m < 30; m++) {
@@ -48,13 +52,20 @@ const Board = (props) => {
         setCoord(coordinates)
         
     }, [props.folders, props.currentDirectory])
- 
+
+    /*
+        This function returns a "Square" component
+    */
     const renderSquare = (i) => {
         let isFolderHere = false;
         let index
         let folder_name
         let folder_directory
 
+        /*
+            Iterate through the current folders and check if there is a match
+            with the coordinates
+        */
         for (let m = 0; m < currentFolders.length; m++) {
             if ((currentFolders[m].posX === coord[i].posX) && (currentFolders[m].posY === coord[i].posY)) {
                 folder_name = currentFolders[m].folder_name
@@ -69,6 +80,10 @@ const Board = (props) => {
             }
         }
 
+        /*
+            If there is a folder in the current directory that has the same 
+            coordinates as "coord[i]", we change the value of "isFolderHere" to "true"
+        */
         const piece = isFolderHere ? 
             <Folder
                 folder_name={currentFolders[index].folder_name} 

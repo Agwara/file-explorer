@@ -16,6 +16,10 @@ const Square = (props) => {
     const [displayCreate, setDisplayCreate] = useState(false);
     const [displaEdit, setDisplayEdit] = useState(false)
 
+    /*
+        For setting the drop zone for a folder when it been dragged
+    */
+
     const[{isOver}, drop] = useDrop({
         drop: () => moveFolder(props.dragName, props.dragName, props.folder_directory, props.posX, props.posY),
         accept: ItemTypes.FOLDER,
@@ -36,6 +40,11 @@ const Square = (props) => {
         }, 100)
     }
 
+    /*
+        This function is fired when a user right clicks on a square.
+        if the square has a folder_name, then the edit popup shows
+        if the square has no folder_name, then the create popup shows
+    */
     const test = (event) => {
         if (event.button === 2 && props.folder_name) {
             setDisplayEdit(true)
@@ -44,8 +53,11 @@ const Square = (props) => {
         }
     }
 
+    /*
+        This function is fired when a users drags a folder.
+        It is called in the drop function.
+    */
     const moveFolder = (name, name2, directory, sqX, sqY) => {
-        console.log(name, name2)
         if (props.folder_name) {
             setNotAllowed("red")
             setTimeout(() => {
@@ -56,6 +68,9 @@ const Square = (props) => {
         }
     }
 
+    /*
+        It is fired when a mouse leaves a square area
+    */
     const onRemoveActivePopUp = () => {
         setTimeout(() => {
             setDisplayEdit(false)
@@ -63,6 +78,9 @@ const Square = (props) => {
         }, 100)
     }
 
+    /*
+        When we hover on a square we set the "dragName" in the redux store 
+    */
     const onSetDragName = () => {
         props.set_drag_name(props.folder_name)
     }

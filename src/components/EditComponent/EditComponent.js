@@ -5,16 +5,22 @@ import "./EditComponent.css";
 
 import {delete_folder, rename_folder} from "../../actions/folders"
 
+/*
+    This component handles the logic for Editing and Removoing a folder
+*/
 
 const EditComponent = (props) => {
     const [errorMessage, setErrorMessage] = useState(false)
     const [newFolderName, setNewFolderName] = useState("") 
 
+
+    // Changes the newFolderName state variable when a user types 
     const onNameChange = (e) => {
         setNewFolderName(e.target.value)
         setErrorMessage(false)
     }
 
+    // Checks if that particular name exist when the input field is out of focus
     const checkFolderName = () => {
         props.folders.map((folder) => {
             if (folder.folder_name === newFolderName) {
@@ -24,21 +30,29 @@ const EditComponent = (props) => {
         })
     }
 
+    // For closing the component
     const closePopUp = () => {
         props.closeEditPopUp()
     }
 
+    // For removing the error message
     const removeErrorMessage = (e) => {
         setErrorMessage(false)
     }
 
-
+    /*
+        This function dispatches a redux action to update the app state
+        after deleting a folder
+    */
     const onDeleteFolder = () => {
         props.delete_folder(props.folder_name, props.folder_directory)
         props.closeEditPopUp()
     }
 
-
+    /*
+        This function dispatches a redux action to update the app state
+        after editing a folder
+    */
     const onRenameChange = () => {
         if ((newFolderName.length > 0) && (!errorMessage)) {
 
